@@ -1,4 +1,4 @@
-{% extends 'store/main.html' %} {% load static %} {% block content %}
+{% extends 'store/main.html' %} {% load static %} {% block content %} {% csrf_token %}
 <div class="row">
   {% for product in products %}
   <div class="col-lg-4">
