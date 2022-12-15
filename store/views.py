@@ -6,6 +6,7 @@ from django.views.generic import TemplateView, ListView
 
 from .models import *
 
+from django.views.decorators.csrf import csrf_exempt
 
 def store(request):
     products = Product.objects.all()
