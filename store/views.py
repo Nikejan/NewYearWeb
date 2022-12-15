@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Q
 from django.views.generic import TemplateView, ListView
 
@@ -6,13 +7,12 @@ from django.views.generic import TemplateView, ListView
 
 from .models import *
 
-from django.views.decorators.csrf import csrf_exempt
-
+@csrf_exempt
 def store(request):
     products = Product.objects.all()
     context = {'products': products}
     return render(request, 'store/store.html', context)
-@csrf_exempt
+
 
 class HomePageView(TemplateView):
     template_name = 'main.html'
