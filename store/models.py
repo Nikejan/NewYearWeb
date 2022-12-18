@@ -6,7 +6,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=7, decimal_places=0)
     digital = models.BooleanField(default=False, null=True, blank=True)
-    image = models.ImageField()
+    image_url = models.CharField(max_length=1087)
     
     class Meta:
           verbose_name_plural = "store"
