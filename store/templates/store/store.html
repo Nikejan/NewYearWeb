@@ -2,9 +2,6 @@
 <div class="row">
   {% for product in products %}
   <div class="col-lg-4">
-    {% if product.image %}
-    <img class="thumbnail" src="{{product.image.url}}" />
-    {% endif %}
     <div class="box-element product">
       <h6><strong>{{ product.name }}</strong></h6>
       <hr />
@@ -69,7 +66,7 @@
         class="inline"
         style="display: inline-block; float: right; font-size: 20px"
       >
-        <strong>{{product.price|floatformat:2}}сум</strong>
+ 
       </h4>
       <hr />
       <p style="font-size: 10px; margin: 0px">Note: here</p>
