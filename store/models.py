@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=10087)
     price = models.DecimalField(max_digits=7, decimal_places=0)
     image = models.ImageField()
     gentra = models.CharField(max_length=200)
